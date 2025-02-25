@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thembi's Beading Project</title>
+    <style>
+        body{
+            background: #FFD3B6;
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        
+        }
+        img{
+            max-width: 100%;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            
+        }
+        button{
+            display:block;
+            margin: 20px auto;
+            border: 1px solid;
+            background: none;
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+        button:hover{
+            background: #FFD3B6;
+            cursor:pointer;
+        }
+
+        .myself{
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .page{
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .theme-button{
+            font-size: 10px;
+            background: black;
+            color: white;
+            padding: 5px 8px;
+        }
+        .theme-button:hover{
+            color:black;
+            background: white;
+        }
+        .beadwork{
+            border-radius:10px;
+            transition: 150ms ease-in-out;
+            display:block;
+            width: 400px;
+            height:400px;
+        }
+        .beadwork:hover{
+            filter:contrast(80%);
+            transform: scale(1.1);
+        }
+        .grid{
+            margin:15px 0;
+            display:grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            grid-template-rows: (3,2fr 2fr);
+            gap: 20px;
+        }
+        .grid img{
+            width:100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+        }
+        .grid img:hover{
+            transform: scale(2);
+        }
+        .dark{
+            background: linear-gradient(103.3deg, rgb(253, 109, 104) 7.7%, rgb(248, 150, 105) 90.8%);
+            color: white;
+
+        }
+        .dark .page{
+            background: radial-gradient(circle at 0.7% 2.7%, rgb(237, 220, 140) 0%, rgb(241, 121, 121) 90%);
+        }   
+        .dark a{
+            color: #FFD3B6;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="theme-button">Dark theme</button>
+    <div class="page">
+    <h1>❣Beading❣</h1>
+    <h2>Beading is my SuperPower</h2>
+    <a href="https://en.wikipedia.org/wiki/Beadwork#:~:text=Beadwork%20is%20the%20art%20or,the%20kind%20of%20art%20produced."target="_blank">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/149/513/original/bag2.jpeg?1730802570"
+    alt=""
+    class="beadwork"
+    />
+    </a>
+    <div class="grid">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/149/507/original/images_beadbracelet.jpeg?1730801149"
+    alt=""
+    />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/149/508/original/images_beadkeychain.jpeg?1730801455"
+    alt=""
+    />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/149/509/original/imagesbeadclip.jpeg?1730801851"
+    alt=""
+    />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/149/510/original/images_beadearing.jpeg?1730802074"
+    alt=""
+    />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/150/151/original/IMG_0781-scaled.jpg?1731426833
+    "alt=""
+    />
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/150/152/original/cocobee-Baroque-Pearl-Hair-Accessories-Pink-Handmade-Beaded-Headbands.jpg?1731427510"
+    alt=""
+    />
+    </div>
+    <p>
+        Beadwork is the art or craft of attaching beads to one another by stringing them onto a thread or thin wire with a sewing or beading needle or sewing them to cloth. Beads are produced in a diverse range of materials, shapes, and sizes, and vary by the kind of art produced.
+        <a href=":/https/en.wikipedia.org/wiki/Beadwork#:~:text=Beadwork%20is%20the%20art%20or,the%20kind%20of%20art%20pro">
+        <br>
+            <strong>Learn more on wikipidea</strong>
+        </a>
+    </p>
+    <button class="learn-button">Learn Beading!</button>
+    </div>
+    <p class="myself">Coded by Thembile Maseko</p>
+    <script>
+        function learn(){
+            let tutorial=prompt("Would like to learn beading?");
+            let name=prompt("What is your name?");
+            let email=prompt("what is your email?");
+           alert(
+            "Hi👋 " +
+            name +
+            "Contact us on thembilemaseko78@gmail.com. We'll be in touch with you🤩"
+           ) ;
+
+        }
+
+        let button=document.querySelector(".learn-button");
+        button.addEventListener("click", learn);
+        
+        function changeTheme(){
+            let body=document.querySelector("body");
+            // body.classList.toggle("dark");
+
+            if(body.classList.contains("dark")){
+                body.classList.remove("dark");
+            }else{
+                body.classList.add("dark");
+            }
+        }
+        let themeButton=document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+</body>
+</html>
